@@ -12,21 +12,12 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
   <title>Milo - Magazine/Blog Theme</title>
-
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+  <Link rel="stylesheet" href="css/home-threecolumns.css"> 
   <link href="css/app.css" rel="stylesheet">
   <style>
-    header{
-      display: flex;
-      flex-direction: column;
-      /* max-width: 1500px; */
-      /* margin:0 auto; */
-      padding:20px;
-    }
-    .header_ele{
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
+   
   </style>
 </head>
 <body>
@@ -108,7 +99,32 @@
         </div>
         <div>
           <button type="button" class="btn btn-secondary">Subscribe Now</button>
-          <button type="button" class="btn btn-secondary">Login</button>
+          <!-- Button trigger modal -->
+<button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#exampleModalCenter">
+  Login
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-body">
+        <h4>Log in or Create an Account</h4>
+        <label style="width: 100%;text-align: left;margin-top: 10px;" >
+          <p style="margin: 0;font-size: 10px;">Email Address</p>
+          <input style="width: 100%;" type="email" />
+        </label>
+        <button class="btn btn-secondary w-100">Continue</button>
+        
+        <p style="margin-top: 5px;"> or </p>
+        <p style="font-size: 12px;">By continuing, you agree to the Terms of Service and acknowledge our Privacy Policy.</p>
+        <button class="btn btn-outline-dark w-100" style="margin:10px 0"><i class="fa fa-google-official"></i>&nbsp; Continue with Google</button>
+        <button class="btn btn-outline-dark w-100" style="margin:10px 0"><i class="fa fa-facebook-official"></i>&nbsp; Continue with Facebook</button>
+        <button class="btn btn-outline-dark w-100" style="margin:10px 0"><i class="fa fa-apple"></i> &nbsp;Continue with Apple</button>
+      </div>
+    </div>
+  </div>
+</div>
         </div>
       </section>
     <section class = "header_ele header_2">
@@ -131,14 +147,29 @@
     </section >
     <hr>
     <section class = "header_el header_3">
-      <ul class="header_el">
+      <ul class="header-3-ul">
         <li>World</li>
         <li>U.S.</li>
         <li>Politics</li>
         <li>N.Y.</li>
         <li>Business</li>
+        <li>Opinion</li>
+        <li>Tech</li>
+        <li>Science</li>
+        <li>Health</li>
+        <li>Sports</li>
+        <li>Arts</li>
+        <li>Books</li>
+        <li>Style</li>
+        <li>Food</li>
+        <li>Travel</li>
+        <li>Magazine</li>
+        <li>T Magazine</li>
+        <li>Real Estate</li>
+        <li>Video</li>
       </ul>
     </section>
+    <hr class="double">
   </header>
 
   <main class="main pt-4">
@@ -336,31 +367,98 @@
     </div>
   </div>
 
-  <footer class="site-footer bg-darkest">
+  <footer class="footer">
+    <h1>The New York Times</h1>
     <div class="container">
-
-      <ul class="nav justify-content-center">
-        <li class="nav-item">
-          <a class="nav-link" href="#">Privacy policy</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Terms</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Feedback</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Advertise</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="page-contact.html">Contact</a>
-        </li>
-      </ul>
-      <div class="copy">
-        &copy; Milo 2019<br />
-        All rights reserved
+      <div >
+        <ul>
+          <li style="margin-bottom:15px"><strong>NEWS</strong></li>
+          <li>Home Page</li>
+          <li>World</li>
+          <li>CoronaVirus</li>
+          <li>U.S.</li>
+          <li>Politics</li>
+          <li>New York</li>
+          <li>Business</li>
+          <li>Tech</li>
+          <li>Science</li>
+          <li>Sports</li>
+          <li>Olympics</li>
+          <li>Wildlife Tracker</li>
+          <li>Obituries</li>
+          <li>Today's Paper</li>
+          <li>Connections</li>
+          <li>Trending</li>
+        </ul>
+      </div>
+      <div >
+        <ul>
+          <li style="margin-bottom:15px"><strong>OPINION</strong></li>
+          <li>Today's Opinion</li>
+          <li>Columnist</li>
+          <li>Editorials</li>
+          <li>Guest Essays</li>
+          <li>Letters</li>
+          <li>Sunday Review</li>
+          <li>Video: Opinion</li>
+        </ul>
+      </div>
+      <div >
+        <ul>
+          <li style="margin-bottom:15px"><strong>ARTS</strong></li>
+          <li>Today's Arts</li>
+          <li>Books</li>
+          <li>Best Seller Book List</li>
+          <li>Art and Design</li>
+          <li>Dance</li>
+          <li>Movies</li>
+          <li>Music</li>
+          <li>Pop Culture</li>
+          <li>Television</li>
+          <li>Theater</li>
+          <li>Video : Arts</li>
+          
+        </ul>
+      </div>
+      <div>
+        <ul>
+          <li style="margin-bottom:15px"><strong>LIVING</strong></li>
+          <li>Automotive</li>
+          <li>Games</li>
+          <li>Education</li>
+          <li>Food</li>
+          <li>Health</li>
+          <li>Jobs</li>
+          <li>Love</li>
+          <li>Magazine</li>
+          <li>Parenting</li>
+          <li>Real Estate</li>
+          <li>Style</li>
+          <li>T Magazine</li>
+          <li>Travel</li>
+        </ul>
+      </div>
+      <div >
+        <ul>
+          <li style="margin-bottom:15px"><strong>MORE</strong></li>
+          <li>Reading Center</li>
+          <li>WireCutter</li>
+          <li>Cooking</li>
+          <li>Live Events</li>
+          <li>The Learning Network</li>
+          <li>Tools & Services</li>
+          <li>Podcasts</li>
+          <li>Multimedia</li>
+          <li>Photography</li>
+          <li>Video</li>
+          <li>TimesMachine</li>
+          <li>NYT Score</li>
+          <li>Manage My Account</li>
+          <li>NYTLicensing</li>
+        </ul>
       </div>
     </div>
+    <hr class="double">
   </footer>
 
   <script src="js/app.js"></script>
