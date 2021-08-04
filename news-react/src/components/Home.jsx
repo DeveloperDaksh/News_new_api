@@ -1,10 +1,56 @@
-import React from 'react'
+import { Button, Container } from '@material-ui/core'
+import React, { useEffect, useState } from 'react'
+import { Link } from 'react-router-dom'
+
 
 const Home = () => {
-    return (
+  const [stories, setStories] = useState([])
+  useEffect( ()=>{
+    const getNews = async ()=>{
+      let response;
+      try{
+         response =  await fetch("https://hacker-news.firebaseio.com/v0/topstories.json");
+         const responseData = await response.json()
+         let topStories = []
+         let maxStory = 10
+         for(let id in responseData){
+           if(maxStory === 0) break
+           maxStory -=1
+          let story = await fetch(`https://hacker-news.firebaseio.com/v0/item/${id}.json`)
+          const storyData = await story.json()
+          topStories.push(storyData)
+         }
+         setStories(topStories)
+         console.log(responseData);
+      }catch(err){
+        console.log(err);
+      }
+    }
+    getNews();
+  },[])
+
+  console.log(stories)
+  return (
         <>
 <main class="main pt-4">
-
+{stories && <Container style={{display:"flex", flexWrap:"true"}}>
+  {stories && stories.map(story => 
+    {
+      if(story === null) return (<></>)
+      return (<Container>
+        <p>
+          {story.title? story.title : "Title"}
+        </p>
+    <p>
+        {story.by ? story.by : "Author"}
+    </p>
+    <p>
+        {story.time? new Date(story.time*1000).toLocaleDateString() : "null"}
+    </p>
+    <Link to={`/story/${story.id}`} variant="outline-primary"> Click Here to Read More</Link>
+</Container>)}
+  )}
+</Container>}
 <div class="container">
 
   <div class="row">
