@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+{% load static%}
+<!--<link rel="stylesheet" href="{% static 'css/style.css' %}" type="text/css">-->
+{% block content %}
+ <!-- Single News Start-->
+ <div class="single-news">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="sn-container">
+                    <div class="sn-img">
+                        <img src="{{image}}" />
+                    </div>
+                    <div class="sn-content">
+                        <h1 class="sn-title">{{title}}</h1>
+                        <p>
+                           {{publish}}
+                        </p>
+                        <p>
+                            {{description}} - {{author}}
+                        </p>
+                        
+                        <p>
+                            {{content}}
+                        </p>
+                    </div>
+                </div>
+                <div class="sn-related">
+                    <h2>Popular News</h2>
+                    <div class="row sn-slider">
+                        {% for title1,img1 in source_data1 %}
+                        <div class="col-md-4">
+                            <div class="sn-img">
+                                <img src="{{img1}}"/>
+                                <div class="sn-title">
+                                    <a href="/news/?news={{title1}}">{{title1}}</a>
+                                </div>
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Single News End-->        
+
+{% endblock %}

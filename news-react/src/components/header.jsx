@@ -12,10 +12,10 @@ const  Header = () => {
         </div>
         <div>
           <button type="button" style={{"color":"black"}} class="btn btn-outline-light">US</button>
-          <button type="button" style={{"color":"black"}}  class="btn btn-outline-light">International</button>
-          <button type="button" style={{"color":"black"}}  class="btn btn-outline-light">Canada</button>
-          <button type="button" style={{"color":"black"}}  class="btn btn-outline-light">Spain</button>
-          <button type="button" style={{"color":"black"}}  class="btn btn-outline-light">Mandarin</button>
+          <button type="button" style={{"color":"gray"}}  class="btn btn-outline-light">International</button>
+          <button type="button" style={{"color":"gray"}}  class="btn btn-outline-light">Canada</button>
+          <button type="button" style={{"color":"gray"}}  class="btn btn-outline-light">Spain</button>
+          <button type="button" style={{"color":"gray"}}  class="btn btn-outline-light">Mandarin</button>
         </div>
         <div>
           <button type="button" class="btn btn-secondary">Subscribe Now</button>

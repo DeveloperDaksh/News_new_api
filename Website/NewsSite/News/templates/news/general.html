@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% load static%}
+<!--<link rel="stylesheet" href="{% static 'css/style.css' %}" type="text/css">-->
+{% block content %}
+
+        <!-- Source News Start-->
+        <div class="cat-news">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h2 style="text-transform: Uppercase;">{{selected_source}}</h2>
+                        <div class="row cn-slider">
+                            {% for title,img in source_data %}
+                            <div class="col-md-6">
+                                <div class="cn-img">
+                                    <img src="{{img}}" />
+                                    <div class="cn-title">
+                                        <a href="/news/?news={{title}}">{{title}}</a>
+                                    </div>
+                                </div>
+                            </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                    </div>
+                    </div>
+                    </div>
+                    <!-- Source News Start-->
+{% endblock %}
